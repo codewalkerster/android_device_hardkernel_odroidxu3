@@ -1,0 +1,248 @@
+import init.odroidxu3.usb.rc
+
+on init
+    start watchdogd
+
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+    mkdir /storage/sdcard0/.android_secure 0775 system system
+
+    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /storage/sdcard0 0700 root root
+
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
+    mkdir /storage/sdcard1 0700 root root
+
+    mkdir /mnt/media_rw/usb2host 0700 media_rw media_rw
+    mkdir /storage/usb2host 0700 root root
+   
+    mkdir /mnt/media_rw/usb3device 0700 media_rw media_rw
+    mkdir /storage/usb3device 0700 root root
+
+    mkdir /mnt/media_rw/usb3host 0700 media_rw media_rw
+    mkdir /storage/usb3host 0700 root root
+    
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/sdcard1:/storage/usb2host:/storage/usb3device:/storage/usb3host
+
+    # for backwards compatibilit
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /storage/sdcard1 /extSdCard
+    symlink /storage/sdcard1 /mnt/extSdCard
+    symlink /storage/sdcard1 /external_sd
+    symlink /storage/usb2host /usb2host
+    symlink /storage/usb2host /mnt/usb2host
+    symlink /storage/usb3device /usb3device
+    symlink /storage/usb3device /mnt/usb3device
+    symlink /storage/usb3host /usb3host
+    symlink /storage/usb3host /mnt/usb3host
+
+on post-fs-data
+    mkdir /data/media 0770 media_rw media_rw
+
+    setprop vold.post_fs_data_done 1
+
+on boot
+    # override init.rc to keep plenty of large order chunks around
+    # to improve allocation times
+    write /proc/sys/vm/min_free_kbytes 32768
+    write /proc/sys/vm/min_free_order_shift 1
+
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+    setprop ro.radio.noril yes
+
+    # Set up kernel tracing, but disable it by default
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+    write /sys/kernel/debug/tracing/tracing_on 0
+
+    chmod 0666 /sys/devices/10060000.tmu/temp
+    chown system system /sys/devices/10060000.tmu/temp
+
+    chmod 0666 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu5/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu5/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu6/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu6/cpufreq/cpuinfo_cur_freq
+    chmod 0666 /sys/devices/system/cpu/cpu7/cpufreq/cpuinfo_cur_freq
+    chown system system /sys/devices/system/cpu/cpu7/cpufreq/cpuinfo_cur_freq
+
+    chmod 0666 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
+    chmod 0666 /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
+    chown system system /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
+
+    chmod 0666 /sys/bus/iio/devices/iio:device0/in_voltage0_raw
+    chown system system /sys/bus/iio/devices/iio:device0/in_voltage0_raw
+
+#INA231 Energy monitor sensor
+	chmod 0666 /dev/sensor_arm
+	chown system system /dev/sensor_arm
+	chmod 0666 /dev/sensor_kfc
+	chown system system /dev/sensor_kfc
+	chmod 0666 /dev/sensor_g3d
+	chown system system /dev/sensor_g3d
+	chmod 0666 /dev/sensor_mem
+	chown system system /dev/sensor_mem
+
+    chmod 0666 /sys/devices/11800000.mali/clock
+    chmod 0666 /sys/devices/10060000.tmu/temp
+
+#ioboard
+    chmod 0666 /dev/ioboard-spi-misc
+    chown system system /dev/ioboard-spi-misc
+
+on fs
+    mount_all /fstab.odroidxu3
+#    setprop ro.crypto.fuse_sdcard true
+
+	#===================================================================
+	#
+	# wi-fi post data
+	#
+	#===================================================================
+	mkdir /data/misc/wifi 0770 wifi wifi
+	mkdir /data/misc/wifi/sockets 0770 wifi wifi
+	mkdir /data/misc/dhcp 0770 dhcp dhcp
+	chown dhcp dhcp /data/misc/dhcp
+
+	setprop wifi.interface "wlan0"
+	setprop wlan.interface "wlan0"
+	setprop wlan.driver.status "ok"
+
+# Permissions for backlight
+    chmod 0660 /sys/class/backlight/pwm-backlight.0/brightness
+    chown system system /sys/class/backlight/pwm-backlight.0/brightness
+
+# Copy DRM Key
+    copy /system/app/wv.keys /factory/wv.keys
+
+# Permission for DRM Key
+    chmod 0644 /factory/wv.keys
+
+# virtual sdcard daemon running as media_rw (1023)
+
+# su daemon
+service su_daemon /system/xbin/su --daemon
+    class core
+    user root
+    group root
+    oneshot
+
+service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+    
+service fuse_usb2host /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usb2host /storage/usb2host
+    class late_start
+    disabled
+
+service fuse_usb3device /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usb3device /storage/usb3device
+    class late_start
+    disabled
+
+service fuse_usb3host /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usb3host /storage/usb3host
+    class late_start
+    disabled
+
+service insmod_ax88179 /system/bin/insmod /system/lib/modules/ax88179_178a.ko
+    class core
+    user root
+    group root
+    oneshot
+                
+service insmod_smsc95xx /system/bin/insmod /system/lib/modules/smsc95xx.ko    
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:init.svc.insmod_ax88179=stopped
+    start insmod_smsc95xx
+
+service insmod_usbmidi /system/bin/insmod /system/lib/modules/snd-usbmidi-lib.ko
+    class core
+    user root
+    group root
+    oneshot
+
+service insmod_usb_audio /system/bin/insmod /system/lib/modules/snd-usb-audio.ko    
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:init.svc.insmod_usbmidi=stopped
+    start insmod_usb_audio
+
+# Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
+service watchdogd /sbin/watchdogd 10 20
+    class core
+
+# on userdebug and eng builds, enable kgdb on the serial console
+on property:ro.debuggable=1
+    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
+    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
+
+# eth0
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
+# IP Renew
+# eth0 
+service iprenew_eth0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
+    
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -Dwext -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf \
+    -O/data/misc/wifi/sockets \
+    -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
+    #   we will start as root and wpa_supplicant will switch to user wifi
+    #   after setting up the capabilities required for WEXT
+    #   user wifi
+    #   group wifi inet keystore
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -ABKL
+	class main
+	disabled
+	oneshot
+
+service iprenew_wlan0 /system/bin/dhcpcd -n
+    class main
+    disabled
+    oneshot
