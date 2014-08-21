@@ -103,6 +103,10 @@ BOARD_USES_SCALER := true
 # Keymaster
 BOARD_USES_TRUST_KEYMASTER := false
 
+# GPS
+BOARD_HAVE_ODROID_GPS := true
+BOARD_SUPPORT_EXTERNAL_GPS := true
+
 #
 # Wifi related defines
 #

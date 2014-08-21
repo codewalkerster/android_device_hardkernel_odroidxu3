@@ -108,6 +108,10 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
+# gps
+PRODUCT_PACKAGES += \
+    gps.odroidxu3
+
 # WideVine DRM setup
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
