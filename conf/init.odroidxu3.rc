@@ -180,10 +180,11 @@ service insmod_smsc95xx /system/bin/insmod /system/lib/modules/smsc95xx.ko
     class core
     user root
     group root
+    disabled
     oneshot
 
-#on property:init.svc.insmod_ax88179=stopped
-#    start insmod_smsc95xx
+on property:init.svc.insmod_ax88179=stopped
+    start insmod_smsc95xx
 
 service insmod_usbmidi /system/bin/insmod /system/lib/modules/snd-usbmidi-lib.ko
     class core
@@ -216,19 +217,9 @@ service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
     disabled
     oneshot
 
-service dhcpcd_eth1 /system/bin/dhcpcd -ABKL
-    class main
-    disabled
-    oneshot
-
 # IP Renew
 # eth0 
 service iprenew_eth0 /system/bin/dhcpcd -n
-    class main
-    disabled
-    oneshot
-
-service iprenew_eth1 /system/bin/dhcpcd -n
     class main
     disabled
     oneshot
