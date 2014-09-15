@@ -108,6 +108,15 @@ BOARD_HAVE_ODROID_GPS := true
 BOARD_SUPPORT_EXTERNAL_GPS := true
 
 #
+# Bluetooth
+#
+BOARD_HAVE_BLUETOOTH := true
+BLUETOOTH_HCI_USE_USB := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/hardkernel/odroidxu3/bluetooth
+BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
+
+#
 # Wifi related defines
 #
 # ralink module = rt5370sta, realtek = rtl8191su
