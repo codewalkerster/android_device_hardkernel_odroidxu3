@@ -84,3 +84,8 @@
 
 # bluetooth device
 /dev/bus/usb/001/005      0660    bluetooth bluetooth
+
+#codewalker
+#for gps
+/dev/ttyACM*   0666    gps             gps
+/dev/ttyUSB*   0666    gps             gps
