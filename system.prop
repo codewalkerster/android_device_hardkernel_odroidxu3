@@ -10,3 +10,9 @@ mouse.right.click=back
 
 persist.demo.hdmirotation=landscape
 ro.sf.hwrotation=0
+
+#GPS
+# support BAUD rate 4800, 9600
+ro.kernel.android.gps=/dev/ttyACM0
+ro.kernel.android.gps.speed=9600
+#ro.kernel.android.gps.speed=4800
