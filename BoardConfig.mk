@@ -127,8 +127,11 @@ BOARD_WLAN_DEVICE	:= rtl819xxu
 WPA_SUPPLICANT_VERSION              := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER         := WEXT
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB    := lib_driver_cmd_rtl
-WIFI_DRIVER_MODULE_NAME            := "rtl8192cu"
-WIFI_DRIVER_MODULE_PATH            := "/system/lib/modules/rtl8192cu.ko"
+WIFI_DRIVER_MODULE_NAME             := "rtl8192cu"
+WIFI_DRIVER_MODULE_PATH             := "/system/lib/modules/rtl8192cu.ko"
+
+WIFI_DRIVER_MODULE_NAME2            := "rt5572sta"
+WIFI_DRIVER_MODULE_PATH2            := "/system/lib/modules/rt5572sta.ko"
 
 
 # Realtek driver has FW embedded inside, and will automatically load FW

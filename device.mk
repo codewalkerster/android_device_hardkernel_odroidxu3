@@ -131,7 +131,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 
 PRODUCT_COPY_FILES += \
-    device/hardkernel/odroidxu3/drivers/rtl8192cu.ko:system/lib/modules/rtl8192cu.ko
+    device/hardkernel/odroidxu3/drivers/rtl8192cu.ko:system/lib/modules/rtl8192cu.ko \
+    device/hardkernel/odroidxu3/drivers/rt5572sta.ko:system/lib/modules/rt5572sta.ko \
+    device/hardkernel/odroidxu3/drivers/RT2870STA.dat:system/etc/Wireless/RT2870STA/RT2870STA.dat
 
 #
 # USB Ethernet Module
