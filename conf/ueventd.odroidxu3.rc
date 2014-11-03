@@ -83,7 +83,7 @@
 /dev/uhid                 0660    bluetooth bluetooth
 
 # bluetooth device
-/dev/bus/usb/001/005      0660    bluetooth bluetooth
+/dev/bus/usb/001/*      0660    bluetooth bluetooth
 
 #codewalker
 #for gps
