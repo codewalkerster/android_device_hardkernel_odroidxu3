@@ -16,3 +16,6 @@ ro.sf.hwrotation=0
 ro.kernel.android.gps=/dev/ttyACM0
 ro.kernel.android.gps.speed=9600
 #ro.kernel.android.gps.speed=4800
+
+# If you want to show animiation, set 20 over.
+bootanim.delay=0
