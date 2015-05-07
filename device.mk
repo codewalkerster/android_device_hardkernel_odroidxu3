@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
 
 # audio
 PRODUCT_PACKAGES += \
+    audio_policy.odroidxu3 \
     audio.primary.odroidxu3 \
     audio.a2dp.default \
     audio.usb.default \
