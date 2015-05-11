@@ -121,17 +121,15 @@ BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 #
 # ralink module = rt5370sta, realtek = rtl8191su
 #
-BOARD_WIFI_VENDOR	:= realtek
-BOARD_WLAN_DEVICE	:= rtl819xxu
+WIFI_DRIVER          := rtl8192cu
+BOARD_WIFI_VENDOR    := realtek
+BOARD_WLAN_DEVICE    := rtl8192cu
 
 WPA_SUPPLICANT_VERSION              := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER         := WEXT
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB    := lib_driver_cmd_rtl
-WIFI_DRIVER_MODULE_NAME             := "rtl8192cu"
-WIFI_DRIVER_MODULE_PATH             := "/system/lib/modules/rtl8192cu.ko"
-
-WIFI_DRIVER_MODULE_NAME2            := "rt5572sta"
-WIFI_DRIVER_MODULE_PATH2            := "/system/lib/modules/rt5572sta.ko"
+BOARD_WPA_SUPPLICANT_DRIVER         := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB    := lib_driver_cmd_nl80211
+WIFI_DRIVER_MODULE_NAME             := rtl8192cu
+WIFI_DRIVER_MODULE_PATH             := /system/lib/modules/8192cu.ko
 
 
 # Realtek driver has FW embedded inside, and will automatically load FW
