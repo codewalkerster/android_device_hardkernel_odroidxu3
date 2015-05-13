@@ -132,23 +132,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 
 PRODUCT_COPY_FILES += \
-    device/hardkernel/odroidxu3/drivers/rtl8192cu.ko:system/lib/modules/rtl8192cu.ko \
-    device/hardkernel/odroidxu3/drivers/rt5572sta.ko:system/lib/modules/rt5572sta.ko \
-    device/hardkernel/odroidxu3/drivers/RT2870STA.dat:system/etc/Wireless/RT2870STA/RT2870STA.dat
-
-#
-# USB Ethernet Module
-#
-PRODUCT_COPY_FILES += \
-    device/hardkernel/odroidxu3/drivers/smsc95xx.ko:system/lib/modules/smsc95xx.ko \
-    device/hardkernel/odroidxu3/drivers/ax88179_178a.ko:system/lib/modules/ax88179_178a.ko
-
-#
-# sound card Module
-#
-PRODUCT_COPY_FILES += \
-    device/hardkernel/odroidxu3/drivers/snd-usb-audio.ko:system/lib/modules/snd-usb-audio.ko \
-    device/hardkernel/odroidxu3/drivers/snd-usbmidi-lib.ko:system/lib/modules/snd-usbmidi-lib.ko
+    $(LOCAL_PATH)/rt2870.bin:root/lib/firmware/rt2870.bin
+    device/hardkernel/odroidxu3/wifi_id_list.txt:system/etc/wifi_id_list.txt
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
