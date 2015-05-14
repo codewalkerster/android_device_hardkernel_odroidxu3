@@ -132,8 +132,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rt2870.bin:root/lib/firmware/rt2870.bin
-    device/hardkernel/odroidxu3/wifi_id_list.txt:system/etc/wifi_id_list.txt
+    $(LOCAL_PATH)/rt2870.bin:root/lib/firmware/rt2870.bin \
+    $(LOCAL_PATH)/wifi_id_list.txt:system/etc/wifi_id_list.txt
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
