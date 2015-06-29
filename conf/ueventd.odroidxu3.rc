@@ -84,6 +84,8 @@
 
 # bluetooth device
 /dev/bus/usb/001/*      0660    bluetooth bluetooth
+/dev/bus/usb/002/*      0660    bluetooth bluetooth
+/dev/bus/usb/003/*      0660    bluetooth bluetooth
 
 #codewalker
 #for gps
