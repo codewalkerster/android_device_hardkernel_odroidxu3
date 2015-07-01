@@ -65,7 +65,8 @@ PRODUCT_PACKAGES += \
     gralloc.exynos5
 
 PRODUCT_PACKAGES += \
-    libion
+    libion \
+    libcec
 
 PRODUCT_PACKAGES += \
     camera.odroidxu3
