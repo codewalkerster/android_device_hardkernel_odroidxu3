@@ -134,6 +134,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rt2870.bin:root/lib/firmware/rt2870.bin \
+    $(LOCAL_PATH)/rtl8712u.bin:root/lib/firmware/rtlwifi/rtl8712u.bin \
     $(LOCAL_PATH)/wifi_id_list.txt:system/etc/wifi_id_list.txt
 
 PRODUCT_PROPERTY_OVERRIDES := \
