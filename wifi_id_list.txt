@@ -13,6 +13,13 @@
 148f 5572 rt2x00usb /system/lib/modules/backports/rt2x00usb.ko
 148f 5572 rt2800lib /system/lib/modules/backports/rt2800lib.ko
 148f 5572 rt2800usb /system/lib/modules/backports/rt2800usb.ko
+148f 5370 compat /system/lib/modules/backports/compat.ko
+148f 5370 cfg80211 /system/lib/modules/backports/cfg80211.ko
+148f 5370 mac80211 /system/lib/modules/backports/mac80211.ko
+148f 5370 rt2x00lib /system/lib/modules/backports/rt2x00lib.ko
+148f 5370 rt2x00usb /system/lib/modules/backports/rt2x00usb.ko
+148f 5370 rt2800lib /system/lib/modules/backports/rt2800lib.ko
+148f 5370 rt2800usb /system/lib/modules/backports/rt2800usb.ko
 0bda 8176 8192cu /system/lib/modules/8192cu.ko /* 8188cu 1*1 dongole */
 0bda 8170 8192cu /system/lib/modules/8192cu.ko /* 8188CE-VAU USB minCard */
 0bda 817e 8192cu /system/lib/modules/8192cu.ko /* 8188CE-VAU USB minCard */
