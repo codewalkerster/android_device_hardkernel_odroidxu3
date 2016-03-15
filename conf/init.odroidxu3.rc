@@ -113,6 +113,8 @@ on boot
     chmod 0666 /dev/ioboard-spi-misc
     chown system system /dev/ioboard-spi-misc
 
+    write /proc/sys/kernel/ctrl-alt-del 0
+
 on fs
     mount_all /fstab.odroidxu3
 #    setprop ro.crypto.fuse_sdcard true
