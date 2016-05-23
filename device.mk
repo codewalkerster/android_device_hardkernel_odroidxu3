@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/hardkernel/odroidxu3/audio_policy.conf:system/etc/audio_policy.conf
 
+PRODUCT_COPY_FILES += \
+    device/hardkernel/odroidxu3/set_density.sh:system/bin/set_density.sh
+
 # Libs
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
