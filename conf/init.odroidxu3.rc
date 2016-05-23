@@ -284,3 +284,9 @@ service auto_density /system/bin/set_density.sh
     user root
     group root
     oneshot
+
+service makebootini /system/bin/makebootini.sh
+    class core
+    user root
+    group root
+    oneshot

@@ -59,6 +59,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/hardkernel/odroidxu3/set_density.sh:system/bin/set_density.sh
 
+PRODUCT_COPY_FILES += \
+    device/hardkernel/odroidxu3/makebootini.sh:system/bin/makebootini.sh \
+    device/hardkernel/odroidxu3/boot.ini.template:system/etc/boot.ini.template
+
 # Libs
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
