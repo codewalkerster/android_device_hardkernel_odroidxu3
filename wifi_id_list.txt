@@ -98,3 +98,4 @@ cdab 8011 8192cu /system/lib/modules/8192cu.ko /* - - compare */
 0df6 0070 8192cu /system/lib/modules/8192cu.ko /* Sitecom - Edimax */
 0789 016d 8192cu /system/lib/modules/8192cu.ko /* LOGITEC - Edimax */
 0bda 8186 8192cu /system/lib/modules/8192cu.ko /* Intel-Xavi( Azwave) */
+0bda 8812 8812au /system/lib/modules/8812au.ko
