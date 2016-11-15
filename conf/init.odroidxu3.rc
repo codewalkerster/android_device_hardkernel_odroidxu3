@@ -279,12 +279,6 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service auto_density /system/bin/set_density.sh
-    class main
-    user root
-    group root
-    oneshot
-
 service makebootini /system/bin/makebootini.sh
     class core
     user root
