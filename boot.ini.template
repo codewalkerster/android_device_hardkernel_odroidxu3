@@ -86,7 +86,9 @@ setenv hpd "1"
 
 setenv led_blink        "1"
 
+setenv disable_vu7 "false"
+
 setenv bootcmd      "movi read kernel 0 40008000;bootz 40008000"
 
-setenv bootargs     "fb_x_res=${fb_x_res} fb_y_res=${fb_y_res} hdmi_phy_res=${hdmi_phy_res} edid=${edid} hpd=${hpd} led_blink=${led_blink}"
+setenv bootargs     "fb_x_res=${fb_x_res} fb_y_res=${fb_y_res} hdmi_phy_res=${hdmi_phy_res} edid=${edid} hpd=${hpd} led_blink=${led_blink} disable_vu7=${disable_vu7}"
 boot
