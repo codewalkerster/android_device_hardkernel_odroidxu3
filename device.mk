@@ -141,6 +141,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml
 
+#cp kl file for adc keyboard
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/Vendor_0001_Product_0001.kl:/system/usr/keylayout/Vendor_0001_Product_0001.kl
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rt2870.bin:root/lib/firmware/rt2870.bin \
     $(LOCAL_PATH)/rtl8712u.bin:root/lib/firmware/rtlwifi/rtl8712u.bin \
