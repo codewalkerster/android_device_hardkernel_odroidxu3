@@ -20,3 +20,4 @@ ro.kernel.android.gps.speed=9600
 # If you want to show animiation, set 20 over.
 bootanim.delay=0
 service.adb.tcp.port=5555
+touchscreen.reverse=false
