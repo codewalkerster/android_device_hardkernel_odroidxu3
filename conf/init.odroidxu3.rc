@@ -93,6 +93,12 @@ on boot
     chmod 0666 /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
     chown system system /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
 
+    chmod 0666 /sys/class/devfreq/exynos5-devfreq-mif/governor
+    chmod 0666 /sys/class/devfreq/exynos5-devfreq-mif/available_frequencies
+
+    chmod 0666 /sys/class/devfreq/exynos5-devfreq-mif/max_freq
+    chown system system /sys/class/devfreq/exynos5-devfreq-mif/max_freq
+
     chmod 0666 /sys/bus/iio/devices/iio:device0/in_voltage0_raw
     chown system system /sys/bus/iio/devices/iio:device0/in_voltage0_raw
 
