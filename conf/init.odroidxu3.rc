@@ -294,3 +294,10 @@ service makebootini /system/bin/makebootini.sh
 
 on property:dev.bootcomplete=1
     start makebootini
+
+service rotation /system/bin/rotation.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
