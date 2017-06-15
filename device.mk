@@ -151,6 +151,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rtl8712u.bin:root/lib/firmware/rtlwifi/rtl8712u.bin \
     $(LOCAL_PATH)/wifi_id_list.txt:system/etc/wifi_id_list.txt
 
+PRODUCT_COPY_FILES += \
+    device/hardkernel/odroidxu3/odroid-usbgps.xml:root/odroid-usbgps.xml
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=160
