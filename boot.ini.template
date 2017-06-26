@@ -20,13 +20,17 @@ ODROIDXU-UBOOT-CONFIG
 # setenv fb_y_res "480"
 # setenv hdmi_phy_res "800x480p60hz"
 
+# setenv fb_x_res "848"
+# setenv fb_y_res "480"
+# setenv hdmi_phy_res "848x480p60hz"
+
 # setenv fb_x_res "800"
 # setenv fb_y_res "600"
 # setenv hdmi_phy_res "600p60hz"
 
 # setenv fb_x_res "1024"
 # setenv fb_y_res "600"
-# setenv hdmi_phy_res "1024x600p43hz"
+# setenv hdmi_phy_res "1024x600p60hz"
 
 # setenv fb_x_res "1280"
 # setenv fb_y_res "720"
@@ -38,7 +42,11 @@ ODROIDXU-UBOOT-CONFIG
 
 # setenv fb_x_res "1280"
 # setenv fb_y_res "768"
-# setenv hdmi_phy_res "768p60hz"
+# setenv hdmi_phy_res "1280x768p60hz"
+
+# setenv fb_x_res "1152"
+# setenv fb_y_res "864"
+# setenv hdmi_phy_res "1152x864p75hz"
 
 # setenv fb_x_res "1280"
 # setenv fb_y_res "800"
@@ -56,6 +64,10 @@ ODROIDXU-UBOOT-CONFIG
 # setenv fb_y_res "1024"
 # setenv hdmi_phy_res "1024p60hz"
 
+# setenv fb_x_res "1400"
+# setenv fb_y_res "1050"
+# setenv hdmi_phy_res "1400x1050p60hz"
+
 # setenv fb_x_res "1360"
 # setenv fb_y_res "768"
 # setenv hdmi_phy_res "1360x768p60hz"
@@ -67,6 +79,14 @@ ODROIDXU-UBOOT-CONFIG
 # setenv fb_x_res "1600"
 # setenv fb_y_res "1200"
 # setenv hdmi_phy_res "1600x1200p60hz"
+
+# setenv fb_x_res "1920"
+# setenv fb_y_res "800"
+# setenv hdmi_phy_res "1020x800p60hz"
+
+# setenv fb_x_res "1792"
+# setenv fb_y_res "1344"
+# setenv hdmi_phy_res "1792x1344p60hz"
 
 # setenv fb_x_res "1920"
 # setenv fb_y_res "1080"
