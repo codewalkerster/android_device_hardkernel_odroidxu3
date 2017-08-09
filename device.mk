@@ -168,7 +168,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mass_storage \
+    persist.sys.usb.config=mtp \
     ro.kernel.android.checkjni=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
