@@ -154,6 +154,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/hardkernel/odroidxu3/odroid-usbgps.xml:root/odroid-usbgps.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/format_userdata.sh:/system/bin/format_userdata.sh \
+    $(LOCAL_PATH)/mk_e2fs:/system/bin/mk_e2fs
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=160

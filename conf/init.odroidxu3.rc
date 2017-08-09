@@ -294,8 +294,16 @@ service makebootini /system/bin/makebootini.sh
 
 on property:dev.bootcomplete=1
     start makebootini
+    start format
 
 service rotation /system/bin/rotation.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+service format /system/bin/format_userdata.sh
     class core
     user root
     group root
