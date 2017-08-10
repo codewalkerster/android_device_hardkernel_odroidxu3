@@ -1,8 +1,7 @@
 #!/bin/sh
 
-if [ -e "/storage/sdcard0/boot.ini" ]
-then
-    break
+if [ -e "/storage/internal/boot.ini" ]; then
+    echo "boot.ini exists"
 else
-    cp /system/etc/boot.ini.template /storage/sdcard0/boot.ini
+    cp /system/etc/boot.ini.template /storage/internal/boot.ini
 fi
