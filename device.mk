@@ -108,8 +108,7 @@ PRODUCT_PACKAGES += \
 # Custom Update packages
 PRODUCT_PACKAGES += \
     OdroidUpdater \
-    Utility \
-    ExpansionBoardExample
+    Utility
 
 PRODUCT_PACKAGES += \
     Superuser \
