@@ -295,7 +295,6 @@ service makebootini /system/bin/makebootini.sh
 
 on property:dev.bootcomplete=1
     start makebootini
-    start format
 
 service rotation /system/bin/rotation.sh
     class core
@@ -305,8 +304,7 @@ service rotation /system/bin/rotation.sh
     oneshot
 
 service format /system/bin/format_userdata.sh
-    class core
+    class main
     user root
     group root
-    disabled
     oneshot
