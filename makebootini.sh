@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ -e "/storage/internal/boot.ini" ]; then
+if [ -e "/internal/boot.ini" ]; then
     echo "boot.ini exists"
 else
-    cp /system/etc/boot.ini.template /storage/internal/boot.ini
+    cp /system/etc/boot.ini.template /internal/boot.ini
 fi
