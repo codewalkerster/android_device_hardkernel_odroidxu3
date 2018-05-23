@@ -300,3 +300,10 @@ service format /system/bin/format_userdata.sh
     user root
     group root
     oneshot
+
+service fb_ili9340 /system/bin/fb_ili9340.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot

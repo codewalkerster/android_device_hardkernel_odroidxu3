@@ -59,6 +59,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/hardkernel/odroidxu3/makebootini.sh:system/bin/makebootini.sh \
     device/hardkernel/odroidxu3/rotation.sh:system/bin/rotation.sh \
+    device/hardkernel/odroidxu3/fb_ili9340.sh:system/bin/fb_ili9340.sh \
     device/hardkernel/odroidxu3/boot.ini.template:system/etc/boot.ini.template
 
 # Libs
