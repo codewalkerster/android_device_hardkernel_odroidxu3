@@ -21,3 +21,6 @@ ro.kernel.android.gps.speed=9600
 bootanim.delay=0
 service.adb.tcp.port=5555
 touchscreen.reverse=false
+
+#rtc wake alarm interval
+ro.wakealarm.minute=0
