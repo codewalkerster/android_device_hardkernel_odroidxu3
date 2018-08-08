@@ -307,3 +307,13 @@ service fb_ili9340 /system/bin/fb_ili9340.sh
     group root
     disabled
     oneshot
+
+service ogst /system/bin/ogst.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:ogst.fb.enable=1
+    start ogst

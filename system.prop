@@ -24,3 +24,5 @@ touchscreen.reverse=false
 
 #rtc wake alarm interval
 ro.wakealarm.minute=0
+
+ogst.fb.enable=0
