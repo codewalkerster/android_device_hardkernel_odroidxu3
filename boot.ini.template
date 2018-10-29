@@ -124,6 +124,10 @@ ODROIDXU-UBOOT-CONFIG
 # setenv fb_y_res "1200"
 # setenv hdmi_phy_res "1920x1200p60hz"
 
+# setenv fb_x_res "1200"
+# setenv fb_y_res "1920"
+# setenv hdmi_phy_res "1200x1920p60hz"
+
 setenv fb_x_res "1280"
 setenv fb_y_res "720"
 setenv hdmi_phy_res "720p60hz"
