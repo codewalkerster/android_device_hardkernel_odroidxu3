@@ -141,7 +141,10 @@ setenv disable_dp "false"
 setenv touch_invert_x "false"
 setenv touch_invert_y "false"
 
+setenv test_mt_vid "0000"
+setenv test_mt_pid "0000"
+
 setenv bootcmd      "movi read kernel 0 40008000;bootz 40008000"
 
-setenv bootargs     "fb_x_res=${fb_x_res} fb_y_res=${fb_y_res} hdmi_phy_res=${hdmi_phy_res} edid=${edid} hpd=${hpd} led_blink=${led_blink} disable_vu7=${disable_vu7} disable_dp=${disable_dp} touch_invert_x=${touch_invert_x} touch_invert_y=${touch_invert_y}"
+setenv bootargs     "fb_x_res=${fb_x_res} fb_y_res=${fb_y_res} hdmi_phy_res=${hdmi_phy_res} edid=${edid} hpd=${hpd} led_blink=${led_blink} disable_vu7=${disable_vu7} disable_dp=${disable_dp} touch_invert_x=${touch_invert_x} touch_invert_y=${touch_invert_y} test_mt_pid=${test_mt_pid} test_mt_vid=${test_mt_vid}"
 boot
