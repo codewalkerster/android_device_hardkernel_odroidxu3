@@ -104,3 +104,12 @@ cdab 8011 8192cu /system/lib/modules/8192cu.ko /* - - compare */
 0bda a811 cfg80211 /system/lib/modules/cfg80211.ko
 0bda a811 mac80211 /system/lib/modules/mac80211.ko
 0bda a811 8812au /system/lib/modules/8812au.ko
+0bda c811 cfg80211 /system/lib/modules/cfg80211.ko
+0bda c811 mac80211 /system/lib/modules/mac80211.ko
+0bda c811 8812au /system/lib/modules/8812au.ko
+0bda 0811 cfg80211 /system/lib/modules/cfg80211.ko
+0bda 0811 mac80211 /system/lib/modules/mac80211.ko
+0bda 0811 8812au /system/lib/modules/8812au.ko
+0bda c820 cfg80211 /system/lib/modules/cfg80211.ko
+0bda c820 mac80211 /system/lib/modules/mac80211.ko
+0bda c820 8821cu /system/lib/modules/8821cu.ko
