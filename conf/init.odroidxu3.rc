@@ -315,5 +315,10 @@ service ogst /system/bin/ogst.sh
     disabled
     oneshot
 
+service usb_modeswitch /system/bin/usb_modeswitch -W -c /internal/usb_modeswitch.conf
+    class main
+    disabled
+    oneshot
+
 on property:ogst.fb.enable=1
     start ogst

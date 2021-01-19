@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     sensors.odroidxu3
 
+# odroid sensor
+PRODUCT_PACKAGES += \
+    usb_modeswitch
+
 # WideVine DRM setup
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
@@ -158,6 +162,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/format_userdata.sh:/system/bin/format_userdata.sh \
     $(LOCAL_PATH)/mk_e2fs:/system/bin/mk_e2fs
+
+PRODUCT_COPY_FILES += \
+    device/hardkernel/odroidxu3/usb_modeswitch.conf.template:system/etc/usb_modeswitch.conf.template
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
