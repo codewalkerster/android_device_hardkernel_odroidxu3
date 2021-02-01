@@ -166,6 +166,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/hardkernel/odroidxu3/usb_modeswitch.conf.template:system/etc/usb_modeswitch.conf.template
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rtl8821c_fw.bin:system/etc/firmware/rtlbt/rtl8821c_fw.bin \
+    $(LOCAL_PATH)/rtl8821c_config.bin:system/etc/firmware/rtlbt/rtl8821c_config.bin
+
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.opengles.version=131072 \
     ro.sf.lcd_density=160
