@@ -28,3 +28,5 @@ ro.wakealarm.minute=0
 ogst.fb.enable=0
 
 kiosk_mode=false
+bt.vendor.name=broadcom
+#bt.vendor.name=realtek
