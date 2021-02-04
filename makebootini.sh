@@ -1,15 +1,10 @@
 #!/bin/sh
 
-if [ -e "/internal/boot.ini" ]; then
-    echo "boot.ini exists"
-else
+if [ ! -f "/internal/boot.ini" ]; then
     cp /system/etc/boot.ini.template /internal/boot.ini
 fi
 
-if [ -f "/internal/usb_modeswitch.con" ]
-then
-    break
-else
+if [ ! -f "/internal/usb_modeswitch.conf" ]; then
     cp /system/etc/usb_modeswitch.conf.template /internal/usb_modeswitch.conf
 fi
 
